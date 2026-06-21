@@ -76,20 +76,23 @@ sudo systemctl reload apache2
 ### 13. Вход в админку
 Логин: Admin
 Пароль: zabbix
+
+
 ![скриншот авторизации в админке](https://github.com/FairDog/8-03-hw/blob/main/img/Вход%20в%20админку.png)
 
 ---
 
+## Задание 2
 
-## 1. Установка Zabbix Agent на ВМ2
+### Установка Zabbix Agent на ВМ2
 
 
-# Добавление репозитория Zabbix 7.0
+### Добавление репозитория Zabbix 7.0
 wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
 sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
 sudo apt update
 
-# Установка библиотек OpenLDAP 2.5 для совместимости с Debian 13
+### Установка библиотек OpenLDAP 2.5 для совместимости с Debian 13
 cd /tmp
 wget http://ftp.debian.org/debian/pool/main/o/openldap/libldap-2.5-0_2.5.13+dfsg-5_amd64.deb
 sudo dpkg -i libldap-2.5-0_2.5.13+dfsg-5_amd64.deb
@@ -98,15 +101,15 @@ cd /usr/lib/x86_64-linux-gnu/
 sudo cp liblber.so.2.0.200 liblber-2.5.so.0.0.0
 sudo ln -sf liblber-2.5.so.0.0.0 liblber-2.5.so.0
 
-# Установка зависимостей
+### Установка зависимостей
 sudo apt install -y libmodbus5
 
-# Скачивание и установка Zabbix Agent
+### Скачивание и установка Zabbix Agent
 cd /tmp
 wget "http://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix/zabbix-agent_7.0.27-1+debian12_amd64.deb"
 sudo dpkg --force-depends -i zabbix-agent_7.0.27-1+debian12_amd64.deb
 
-# Исправление systemd-юнита
+### Исправление systemd-юнита
 sudo tee /usr/lib/systemd/system/zabbix-agent.service << 'EOF'
 [Unit]
 Description=Zabbix Agent
@@ -126,6 +129,9 @@ WantedBy=multi-user.target
 EOF
 
 sudo systemctl daemon-reload
+
+
+
 
 ![ агенты подключены к серверу](https://github.com/FairDog/8-03-hw/blob/main/img/агенты%20подключены%20к%20серверу.png)`
 
