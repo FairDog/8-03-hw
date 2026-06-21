@@ -76,13 +76,7 @@ sudo systemctl reload apache2
 ### 13. Вход в админку
 Логин: Admin
 Пароль: zabbix
-<<<<<<< HEAD
-
 ![скриншот авторизации в админке](https://github.com/FairDog/8-03-hw/blob/main/img/Вход%20в%20админку.png)
-
-=======
-![скриншот авторизации в админке](https://github.com/FairDog/8-03-hw/blob/main/img/Вход%20в%20админку.png)
->>>>>>> f0d8eaa552bc58ba35c87ef406c6f67659f61c7a
 
 ---
 
@@ -133,8 +127,8 @@ EOF
 
 sudo systemctl daemon-reload
 
-![ агенты подключены к серверу](https://github.com/FairDog/8-03-hw/blob/main/img/агенты подключены к серверу.png)`
+![ агенты подключены к серверу](https://github.com/FairDog/8-03-hw/blob/main/img/агенты%подключены%к%серверу.png)`
 
-![ Агент работает с сервером](https://github.com/FairDog/8-03-hw/blob/main/img/Агент работает с сервером.png)`
+![ Агент работает с сервером](https://github.com/FairDog/8-03-hw/blob/main/img/Агент%работает%с%сервером.png)`
 
-![видны поступающие от агентов данные](https://github.com/FairDog/8-03-hw/blob/main/img/видны поступающие от агентов данные.png)`
+![видны поступающие от агентов данные](https://github.com/FairDog/8-03-hw/blob/main/img/видны%поступающие%от%агентов%данные.png)`
